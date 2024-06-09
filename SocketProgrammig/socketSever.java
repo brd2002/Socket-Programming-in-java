@@ -16,8 +16,12 @@ public class socketSever {
             System.out.println("Connection established.......");
             BufferedReader in = new BufferedReader(new InputStreamReader(soc.getInputStream()));
             String str = in.readLine();
+            Integer initial = 1; 
+            for(Integer i = 1 ; i <= Integer.parseInt(str); i++){
+                initial = initial*i ;
+            }
             PrintWriter out = new PrintWriter(soc.getOutputStream() , true);
-            out.println("Sever says "+ str) ; 
+            out.println("Factorial of "+ str + " is : " + initial) ; 
         } catch (Exception e) {
             e.printStackTrace();
         }

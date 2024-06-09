@@ -12,7 +12,7 @@ public class socketClient {
             System.out.println("Client started....");
             Socket soc = new Socket("localhost", 9806);
             BufferedReader userInput = new BufferedReader(new InputStreamReader(System.in));
-            System.out.println("Please enter your name 😊");
+            System.out.println("Please enter a number :");
             String str = userInput.readLine();
             PrintWriter out = new PrintWriter(soc.getOutputStream() , true) ; 
             out.println(str);
